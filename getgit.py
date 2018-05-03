@@ -9,6 +9,11 @@ repo = args.repo
 print ("archiving:", repo)
 
 print ("retrieving issues")
-cmd = "curl https://api.github.com/repos/hiqlabs/%s/issues?access_token=%s > %s" % (repo, args.token, repo+"_issues.json")
+cmd = "curl https://api.github.com/repos/hiqlabs/%s/issues?access_token=%s > %s_issues.json" % (repo, args.token, repo)
+print (cmd)
+os.system(cmd)
+
+print ("retrieving wiki")
+cmd = "git clone git@github.com:hiqlabs/%s.wiki" % repo
 print (cmd)
 os.system(cmd)

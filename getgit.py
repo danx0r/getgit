@@ -17,3 +17,8 @@ print ("retrieving wiki")
 cmd = "git clone git@github.com:hiqlabs/%s.wiki" % repo
 print (cmd)
 os.system(cmd)
+
+print ("retrieving repo")
+cmd = "git clone git@github.com:hiqlabs/%s.git" % repo
+print (cmd)
+os.system(cmd)

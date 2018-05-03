@@ -47,4 +47,13 @@ cmd = "mv %s_issues.json %s" % (repo, repo)
 print (cmd)
 os.system(cmd)
 
+cmd = "mv %s_issues.json %s" % (repo, repo)
+print (cmd)
+os.system(cmd)
+
+print (PURPLE % "compressing")
+cmd = "tar -czf %s.tgz %s/" % (repo, repo)
+print (cmd)
+os.system(cmd)
+
 print (PURPLE % "done")
